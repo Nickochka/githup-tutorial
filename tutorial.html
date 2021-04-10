@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+<header class="page-header">
+    <nav class="nav-site">
+        <a href="/" class="logo">
+            <svg width="30" height="30">
+                <use href="./images/symbol-defs.svg#home"></use>
+            </svg>
+            photo
+        </a>
+        <button type="button" 
+        class="menu-button is-open" 
+        aria-expanded="false" 
+        aria-controls="menu-container"
+        data-menu-button>
+            <svg width="40" height="40" aria-label="Switch mobile menu">
+                <use class="icon-menu" href="./images/mobile-sprite.svg#menu"></use>
+                <use class="icon-close" href="./images/mobile-sprite.svg#close"></use>
+            </svg>
+        </button>
+        <div class="menu-container is-open" id="menu-container" data-menu>
+            <ul class="site-nav list">
+                <li class="site-nav-item">
+                    <a href="./community.html" class="nav-link">Community</a>
+                </li>
+                <li class="site-nav-item">
+                    <a href="./tutorial.html" class="nav-link">Support</a>
+                </li>
+            </ul>
+            <ul class="address list">
+                <li><a href="" class="nav-link">Log in</a></li>
+                <li><a href="" class="nav-link">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <ul class="box-set">
+            <li class="box">1</li>
+            <li class="box">2</li>
+            <li class="box">3</li>
+            <li class="box">4</li>
+            <li class="box">5</li>
+            <li class="box">6</li>
+        </ul>
+    </div>
+    <!-- <div class="thumb">
+        <img srcset="./images/magazine.jpg 1x,
+         ./images/magazine@2x.jpg 2x" 
+        src="./images/magazine.jpg" alt="magazine">
+    </div> -->
+    <div class="img-container">
+        <ul class="img-set">
+            <li class="img-item">
+                <img srcset="./images/magazine.jpg 450w, 
+                ./images/magazine@2x.jpg 900w, 
+                ./images/magazine@3x.jpg 1350w"
+                 src="./images/magazine.jpg" 
+                 alt="magazine"
+                 sizes="(min-width: 960px) 25vw, (min-width: 576px) 50vw, 100vw"
+                >
+            </li>
+            <li class="img-item"></li>
+            <li class="img-item"></li>
+            <li class="img-item"></li>
+        </ul>
+        
+    </div>
+    <a href="" class="btn">Fast start</a>
+ <ul class="list-none">
+     <li class="item icon-delivery">
+         <h2>Lorem, ipsum dolor.</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus tenetur quisquam aliquid molestias, vitae mollitia!
+         </p>
+     </li>
+ </ul>
+
+<svg width="100" height="50" style="outline: 1px solid black;">
+    <rect width="250" height="150" fill="palevioletred" stroke="black" stroke-width="10" x="20" y="20"rx="40"/>
+</svg>
+<svg width="60" height="40" style="outline: 1px solid black;">
+    <circle r="150" fill="orange" stroke="red" stroke-width="8" />
+</svg>
+<div class="article">
+    <div class="product">
+        <img class="art-img" src="./images/mountain.JPG" alt="" width="400" height="300">
+        <div class="product-overlay">
+            <ul class="art-list">
+                <li class="art-item">
+                    <button>
+                        <svg width="40" height="40">
+                            <use href="./images/symbol-defs.svg#home"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <svg width="40" height="40">
+                            <use href="./images/symbol-defs.svg#camera"></use>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <svg width="40" height="40">
+                            <use href="./images/symbol-defs.svg#envelop"></use>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="art-desc">
+        <h3>Two Dots</h3>
+        <p>Game for everyone</p>
+    </div>  
+</div>
+<button data-open-modal>Открыть модалку</button>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Voluptas explicabo ratione rem eos quisquam! Sed.</p>
+<div class="backdrop is-hidden">
+    <div class="modal">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Aperiam qui ad quibusdam quis illum quae nostrum iusto nam esse vel
+             odit itaque odio architecto
+             vitae delectus, enim quos numquam. Eveniet?</p>
+        <button data-close-modal>Закрыть</button>
+    </div>
+</div>
+</main>
+<form class="form" autocomplete="off">
+    <label class="form-field">
+        <input class="form-input" type="text" name="name" placeholder=" ">
+        <span class="form-label">Name</span>
+        <span class="form-icon"></span>
+    </label>
+    <label class="form-field">
+        <input class="form-iput" type="tel" name="tel" placeholder=" ">
+        <span class="form-label">Tel:</span>
+        <span class="form-icon"></span>
+    </label>
+    
+    <div class="form-field">
+        <label for="mail">Mail:</label>
+        <input type="email" name="mail" id="mail">
+    </div>
+    
+    <div role="group" class="group">
+        <h2 class="group-title">Topics</h2>
+        <ul class="topic-list">
+            <li>
+                <label class="field">
+                    <input class="check-input" type="checkbox" name="topic" value="html">
+                    <span class="check-box"></span>
+                    <span class="check-label">HTML</span>   
+                </label>
+            </li>
+            <li>
+                <label class="field">
+                    <input class="check-input" type="checkbox" name="topic" value="css">
+                    <span class="check-box"></span>
+                    <span class="check-label">CSS</span>     
+                </label>
+            </li>
+            <li>
+                <label class="field">
+                    <input class="check-input" type="checkbox" name="topic" value="js">
+                    <span class="check-box"></span>
+                    <span class="check-label">JS</span> 
+                </label>
+            </li>
+            <li>
+                <label class="field">
+                    <input class="check-input" type="checkbox" name="topic" value="react">
+                    <span class="check-box"></span>
+                    <span class="check-label">React</span> 
+                </label>
+            </li>
+        </ul> 
+    </div>
+    <div role="group" class="group">
+        <input type="radio" name="experience" value="jun" id="jun">
+        <label for="jun">Junior</label>
+        <input type="radio" name="experience" value="midl" id="midl">
+        <label for="midl">Middle</label>
+    </div>
+    <div class="form-field">
+        <input type="datetime-local" name="" id=""> 
+    </div>
+    <div class="form-field">
+        <label for="pdf">download copy in pdf</label>
+        <input type="file" name="pdf" id="pdf">
+    </div>
+    <div class="form-field">
+        <textarea class="comment" name="" id="" rows="10"></textarea>
+    </div>
+    <div class="form-field">
+        <input type="checkbox" name="policy" id="policy">
+        <label for="policy">Agree with all</label>
+    </div>
+    <button type="submit">Leave message</button>
+</form>
+<script src="./js/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+img {
+  display: block;
+}
+
+.nav-site {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-nav.list,
+.auth-nav.list {
+  display: flex;
+}
+.logo,
+.nav-link {
+  position: relative;
+  display: block;
+  padding-bottom: 30px;
+  margin-right: 10px;
+}
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 4px;
+  background-color: teal;
+
+  transform: scaleX(0);
+  transition: transform 250ms linear;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* .site-nav-item {
+  position: relative;
+} */
+/* .site-nav-item:hover .submenu {
+  display: block;
+}
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+} */
+
+.container {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.box {
+  margin: 10px;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.box:nth-child(1) {
+  background-color: #636fa4;
+  background-image: url(../images/022-school\ bus.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box:nth-child(2) {
+  background-color: #44a08d;
+  background-image: url(../images/067-abc\ block.png);
+  background-position: 50% 50%;
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+.box:nth-child(3) {
+  background-color: #e8cbc0;
+  background-image: url(../images/global-education.png);
+  background-position: 50% 50%;
+  background-repeat: repeat-y;
+  background-size: 10%;
+}
+.box:nth-child(4) {
+  background-color: #99f2c8;
+  background-image: url(../images/graduate.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 30%;
+}
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid teal;
+  background-image: linear-gradient(
+      to right,
+      RGBA(170, 75, 107, 0.59),
+      RGBA(59, 141, 153, 0.5)
+    ),
+    url(../images/d56148fded6b420414ec7ebf7cf7a171.jpg);
+  /* background-image: url(../images/d56148fded6b420414ec7ebf7cf7a171.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
+}
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+
+  /* transition-property: ;
+  transition-duration: ;
+  transition-timing-function: ; */
+  transition: background-color 250ms linear, color 250ms linear;
+}
+.btn::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+
+  background-image: url(../images/022-school\ bus.png);
+  background-size: contain;
+  background-position: center;
+  transition: transform 250ms linear;
+}
+.btn:hover::before {
+  transform: translateY(-35px);
+}
+.btn::after {
+  position: absolute;
+
+  content: "";
+  width: 20px;
+  height: 20px;
+
+  background-image: url(../images/067-abc\ block.png);
+  background-size: contain;
+  background-position: center;
+
+  transform: translateY(35px);
+  transition: transform 250ms linear;
+}
+.btn:hover::after {
+  transform: translateY(0);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: mediumpurple;
+  color: wheat;
+}
+.item {
+  width: 400px;
+}
+.item::before {
+  display: block;
+  content: "";
+  height: 40px;
+  outline: 2px solid teal;
+  background-color: gray;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.item:nth-child(1)::before {
+  background-image: url(../images/022-school\ bus.png);
+}
+.pane {
+  display: none;
+  padding: 8px;
+  border: 1px solid blue;
+  border-radius: 3px;
+}
+
+.is-active {
+  display: block;
+}
+.social-list {
+  width: 200px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  border: none;
+  background-color: #ffffff;
+}
+.article {
+  width: 400px;
+  margin-left: 400px;
+}
+.product {
+  position: relative;
+  overflow: hidden;
+}
+.product-overlay {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 128, 128, 0.5);
+  top: 0;
+
+  transform: translateX(-100%);
+  transition: transform 250ms linear;
+}
+
+.product:hover .product-overlay {
+  transform: translateX(0%);
+}
+
+.art-desc {
+  width: 400px;
+  background-color: tan;
+  padding: 10px 15px;
+}
+.art-list {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  transition: opacity 250ms linear 250ms;
+}
+.product:hover .art-list {
+  opacity: 1;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: RGBA(170, 75, 107, 0.59);
+
+  opacity: 1;
+  transition: opacity 250ms linear;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 400px;
+  min-width: 600px;
+
+  background-color: teal;
+}
+.form {
+  width: 600px;
+  outline: 1px solid teal;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-field {
+  display: block;
+  position: relative;
+  /* display: flex;
+  flex-direction: column; */
+  margin-bottom: 20px;
+}
+
+.form-field input {
+  margin: 0;
+  border-radius: 4px;
+}
+.form-field input::placeholder {
+  color: #ccc;
+}
+.group-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.topic-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.group {
+  margin-bottom: 20px;
+}
+.comment {
+  padding: 8px;
+}
+.form-input {
+  padding: 10px 35px;
+}
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 35px;
+  transform: translateY(-50%);
+  transition: transform 250ms linear;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: teal;
+  transform: translateY(-50px);
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #99f2c8;
+  transition: background-color 500ms linear;
+}
+/* .form-input:focus ~ .form-icon {
+  background-color: black;
+} */
+.form-field:focus-within > .form-icon {
+  background-color: black;
+}
+/* .topic-list {
+  padding-left: 1.2em;
+}
+.check-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.check-box {
+  position: absolute;
+  margin-top: 0.4em;
+  margin-left: -1em;
+  width: 0.6em;
+  height: 0.6em;
+  box-shadow: 0 0 0 0.1em #636fa4;
+  border-radius: 0.05em;
+}
+.check-input:focus + .check-box {
+  box-shadow: 0 0 0 0.1em #636fa4, 0 0 0 0.2em #44a08d;
+}
+.check-input:checked + .check-box {
+  background-color: #636fa4;
+} */
+.topic-list {
+  position: relative;
+}
+.field {
+  display: flex;
+  align-items: center;
+  outline: 1px solid teal;
+}
+.check-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.check-box {
+  margin-right: 10px;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #636fa4;
+  border-radius: 4px;
+}
+.check-input:checked + .check-box {
+  background-color: #636fa4;
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+.check-label {
+  transition: transform 250ms linear;
+}
+.check-input:checked ~ .check-label {
+  transform: translateX(20px);
+}
