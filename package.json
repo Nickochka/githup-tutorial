@@ -1,0 +1,33 @@
+{
+  "name": "github-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "npmindex.js",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nika-sirak/githup-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nika-sirak/githup-tutorial/issues"
+  },
+  "homepage": "https://github.com/nika-sirak/githup-tutorial#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
+    "@pnotify/core": "^5.2.0",
+    "parcel": "^2.5.0",
+    "sass": "^1.51.0"
+  },
+  "dependencies": {
+    "flatpickr": "^4.6.13",
+    "siema": "^1.5.1",
+    "tippy.js": "^6.3.7",
+    "typed.js": "^2.0.12"
+  }
+}
